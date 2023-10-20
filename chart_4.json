@@ -1,21 +1,28 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 480, "height": 300,
+    "description": "A simple donut chart with embedded data.",
+    "width": 400,
+    "height": 400,
     "data": {"url": "data/residential-dwellings.csv"},
-    "mark": "bar",
-    "encoding": {
-        "x": {
-        "field": "Year",
-        "type": "ordinal",
-        "axis": {"title": "Census year"}
-        },
-        "y": {
-            "field": "Dwelling number", "type": "quantitative"
-        },
-        "color":{
-            "field": "Dwelling type",
-            "scale": {"scheme": "category10"}
+    "params": [
+        {     
+            "name": "Year_selection",
+            "value": 2021,
+            "bind": {
+                "input": "range",
+                "min": 2002,
+                "max": 2021,
+                "step": 1,
+                "name": "Year: "
+            }
         }
-    }  
-}
+    ],
+    "transform": [{"filter": "datum.Year == Year_selection"}],
+    "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
+    "encoding": {
+        "color": {"field": "Dwelling type", "type": "nominal"},
+        "theta": {"field": "Dwelling number", "type": "quantitative"}
+      
+    }
+  }
   

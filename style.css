@@ -1,24 +1,46 @@
 h1 {
     font-family: 'Playfair Display', serif;
     text-align: center;
+    font-size: 4.5em;
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
 }
 
 p {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+}
+
+.normal {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    color: gray;
+}
+
+.caption {
     font-family: 'Roboto', sans-serif;
+    font-size: 1em;
 }
 
 .textalignleft {
-    font-family: 'Roboto', sans-serif;
-    text-align: left
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    text-align: left;
 }
 
 .textalignright {
-    font-family: 'Roboto', sans-serif;
-    text-align: right
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    text-align: right;
 }
 
 .container {

@@ -2,7 +2,6 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
     "height": 600,
-    "title": "Cafe, restaurant, bistro in Melbourne",
     "projection": {"type": "mercator"},
     "layer": [
       {
@@ -17,7 +16,7 @@
           "url": "data/cafes-and-restaurants-with-seating-capacity.json",
           "format": {"type": "topojson", "feature": "cafes-and-restaurants-with-seating-capacity"}
         },
-        "mark": {"type": "geoshape", "filled": false, "stroke": "black", "opacity": 0.025}
+        "mark": {"type": "geoshape", "fill": "orangered", "opacity": 0.0125}
       }
     ]
 }

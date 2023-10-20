@@ -2,7 +2,6 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
     "height": 600,
-    "title": "Drinking fountains in Melbourne",
     "projection": {"type": "mercator"},
     "layer": [
       {
@@ -17,7 +16,7 @@
           "url": "data/drinking-fountains.json",
           "format": {"type": "topojson", "feature": "drinking-fountains"}
         },
-        "mark": {"type": "geoshape", "filled": false, "stroke": "black", "opacity": 1}
+        "mark": {"type": "geoshape", "fill": "blue", "opacity": 1}
       }
     ]
 }
