@@ -1,10 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My HTML page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <script src="vega_lite_vis.js"></script>
+    
+    <title>Melbourne, the most livable city in the world.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h1>Heading 1</h1>
-    <p>My Second Paragraph.</p>
+    <div class="container">
+        
+        <div class="pure-g">
+
+            <div class="pure-u-1">
+                <h1 class="title">Melbourne, the most livable city in the world.</h1>
+            </div>
+            
+            <div class="pure-u-1">
+                <h2>Foods and drinks</h2>
+            </div>
+
+            <div class="pure-u-5-6"> 
+                <div id="chart_1"></div>
+                <p>Figure 1 shows the density of cafe, restaurant and bistros across city of Melbourne</p>
+            </div>
+            <div class="pure-u-1-6"> 
+                <p>Melbourne is well known for being a multicultural society. Therefore there are endless options when it comes to filling up your stomach.</p>    
+            </div>
+            
+            <div class="pure-u-5-6"> 
+                <div id="chart_2"></div>
+                <p>Figure 2 shows where the drinking fountains are located around city of Melbourne</p>
+            </div>
+            <div class="pure-u-1-6"> 
+                <p>Besides food, us humans as living things need to keep ourselves hydrated at all times. In need of water? City of Melbourne got you covered!</p>    
+            </div>
+            
+            
+            <div class="pure-u-1">
+                <h2>Environment</h2>
+                <p>The city council have put massive efforts in sustaining the environment.</p>
+            </div>
+
+            <div class="pure-u-1"> 
+                <div id="chart_3"></div>
+                <p>Figure 3 explains the correlation between greenhouse emission, GDP and population of city of Melbourne.</p>
+            </div>
+
+            <div class="pure-u-1">
+                <h2>Living</h2>
+                <p>How is it like living in Melbourne? Is it as bad as Hong Kong?</p>
+            </div>
+
+            <div class="pure-u-1"> 
+                <div id="chart_4"></div>
+                <p>Figure 4 shows the proportion of the house types people in Melbourne live in.</p>
+            </div>
+            
+            <div class="pure-u-1"> ... </div>
+            <div class="pure-u-1"> ... </div>
+
+        </div>
+
+    </div>
 </body>
 </html>

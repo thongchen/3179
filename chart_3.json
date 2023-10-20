@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "repeat": {
+      "row": ["Population(per 1000)", "GDP($ 100 millions)", "Greenhouse gas emitted(per 10000 metric tonnes)"],
+      "column": ["Greenhouse gas emitted(per 10000 metric tonnes)", "GDP($ 100 millions)", "Population(per 1000)"]
+    },
+    "spec": {
+      "data": {"url": "data/city-of-melbourne-municipal-greenhouse-gas-emissions-2013-2020.csv"},
+      "mark": "point",
+      "params": [
+        {
+          "name": "brush",
+          "select": {
+            "type": "interval",
+            "resolve": "union",
+            "on": "[mousedown[event.shiftKey], window:mouseup] > window:mousemove!",
+            "translate": "[mousedown[event.shiftKey], window:mouseup] > window:mousemove!",
+            "zoom": "wheel![event.shiftKey]"
+          }
+        },
+        {
+          "name": "grid",
+          "select": {
+            "type": "interval",
+            "resolve": "global",
+            "translate": "[mousedown[!event.shiftKey], window:mouseup] > window:mousemove!",
+            "zoom": "wheel![!event.shiftKey]"
+          },
+          "bind": "scales"
+        }
+      ],
+      "encoding": {
+        "x": {"field": {"repeat": "column"}, "type": "quantitative"},
+        "y": {
+          "field": {"repeat": "row"},
+          "type": "quantitative"
+        },
+        "color": {
+          "condition": {
+            "param": "brush",
+            "field": "Year",
+            "type": "nominal"
+          }
+        }
+      }
+    }
+  }
+  

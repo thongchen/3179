@@ -1,0 +1,23 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 600,
+    "title": "Drinking fountains in Melbourne",
+    "projection": {"type": "mercator"},
+    "layer": [
+      {
+        "data": {
+          "url": "data/postcodes.json",
+          "format": {"type": "topojson", "feature": "postcodes"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      },
+      {
+        "data": {
+          "url": "data/drinking-fountains.json",
+          "format": {"type": "topojson", "feature": "drinking-fountains"}
+        },
+        "mark": {"type": "geoshape", "filled": false, "stroke": "black", "opacity": 1}
+      }
+    ]
+}

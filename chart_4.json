@@ -1,0 +1,21 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 480, "height": 300,
+    "data": {"url": "data/residential-dwellings.csv"},
+    "mark": "bar",
+    "encoding": {
+        "x": {
+        "field": "Year",
+        "type": "ordinal",
+        "axis": {"title": "Census year"}
+        },
+        "y": {
+            "field": "Dwelling number", "type": "quantitative"
+        },
+        "color":{
+            "field": "Dwelling type",
+            "scale": {"scheme": "category10"}
+        }
+    }  
+}
+  

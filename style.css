@@ -1,0 +1,29 @@
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.textalignleft {
+    font-family: 'Roboto', sans-serif;
+    text-align: left
+}
+
+.textalignright {
+    font-family: 'Roboto', sans-serif;
+    text-align: right
+}
+
+.container {
+    margin:0 auto; /* this will center the page */
+    width:960px; /*  use your width here */
+    padding: 50px;
+    background-color: #F3FAF9;
+ }
